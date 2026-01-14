@@ -4,6 +4,8 @@ import edu.jensen.webshopapi.entity.Product;
 import edu.jensen.webshopapi.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -16,5 +18,10 @@ public class ProductController {
     @PostMapping
     public Product createProduct(@RequestBody Product product){
         return productService.saveProduct(product);
+    }
+
+    @GetMapping
+    public List<Product> getAllProduct(){
+        return productService.getAllProduct();
     }
 }
