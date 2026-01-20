@@ -1,3 +1,7 @@
+server:
+  address: 0.0.0.0
+  port: 8080
+
 spring:
   application:
     name: webshopapi
@@ -7,7 +11,7 @@ spring:
     url: jdbc:mysql://localhost:3306/webshop?serverTimezone=UTC
     #url: jdbc:mysql://localhost:3307/webshop?serverTimezone=UTC
     username: root
-    password: Password123 #root
+    password: DawoodMoosa4977 #root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
