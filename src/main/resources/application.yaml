@@ -1,30 +1,14 @@
-server:
-  address: 0.0.0.0
-  port: 8080
-
 spring:
   application:
     name: webshopapi
 
   datasource:
-    # 1. Added ?serverTimezone=UTC for stable connection
-<<<<<<< HEAD
-    #url: jdbc:mysql://localhost:3306/webshop?serverTimezone=UTC
-    url: jdbc:mysql://localhost:3307/webshop?serverTimezone=UTC
-    username: root
-    password: root #Password123
-=======
     url: jdbc:mysql://localhost:3306/webshop?serverTimezone=UTC
-    #url: jdbc:mysql://localhost:3307/webshop?serverTimezone=UTC
     username: root
-    password: DawoodMoosa4977 #root
->>>>>>> 042d0d3e3b166960783f51077bbf546f9bf55178
+    password: Password123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
-    # 2. Explicitly tell Hibernate to manage tables
     ddl-auto: update
-    # 3. Explicitly set the SQL dialect for MySQL 8
-    database-platform: org.hibernate.dialect.MySQLDialect # Use the generic one for better compatibility
-
-    show-sql: true # Helpful for students to see the SQL being executed
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
